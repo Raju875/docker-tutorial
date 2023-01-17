@@ -3,14 +3,14 @@ This is the instruction repository for docker.
 
 ## Table of Contents
 
-1. [Docker Basic Commands](#basic-commands)
+1. [Basic Docker Commands](#basic-docker-commands)
 2. [Docker Composer](#docker-composer)
 3. [Dockerfile](#dockerfile)
 4. [Private Repository
    - [AWS](#aws-private-repository)
    - [API Documentation](#api-documentation)
 
-## Docker Basic Commands
+## Basic Docker Commands
 #### # pull latest version from docker-hub to local environment
     docker pull  radis
 #### # pull with specific version
