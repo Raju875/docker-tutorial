@@ -7,9 +7,7 @@ This is the instruction repository for docker.
 2. [Developing with Containers](#developing-with-containers)
 3. [Docker Compose](#docker-compose)
 4. [Dockerfile](#dockerfile)
-5. [Private Repository
-   - [AWS](#aws-private-repository)
-   - [API Documentation](#api-documentation)
+5. [Docker Private Repository](#docker-private-repository)
 
 ## Main Docker Commands
 #### # pull latest version from docker-hub to local environment
@@ -154,6 +152,7 @@ and check the network
 also container
 
       docker ps
+      
       Output
          CONTAINER ID   IMAGE       	  COMMAND                  CREATED          STATUS         PORTS              NAMES
          8154f8444eb8   mongo-express    "tini -- /docker-enc"    10 minutes ago   Up 2 minutes   0.0.0.0:8081/tcp   myapp_mongo-express_1
@@ -202,8 +201,27 @@ Check docker image
             mongo-express   4.0       191c4017dcdd   2 years ago      89.3MB
             redis           latest    5f2e708d56aa   5 days ago       117MB
             redis           4.0       191c4017dcdd   2 years ago      89.3MB
-Multi-image layer <br>
+Multi-image layer <br><br>
 <img src="./images/dockerfile/image_layer.PNG" style="height:350px; width:430px">
+
+### Docker Private Repository
+First login AWS, create a reposity "my-app" under ERC(elastic registry container) service and follow the sequence steps: <br><br>
+<img src="./images/aws-private-repo/1_ecr_get_started.PNG"> <br><br>
+<img src="./images/aws-private-repo/2_create_repository.PNG"> <br><br>
+<img src="./images/aws-private-repo/3_repository_list.PNG"> <br><br>
+<img src="./images/aws-private-repo/4_image_list_under_repository.PNG"> <br><br>
+<img src="./images/aws-private-repo/5_open_view_push_commands_for_repository.PNG"> <br><br>
+<img src="./images/aws-private-repo/6_push_commands_details.PNG"> <br><br>
+<img src="./images/aws-private-repo/7_before_push_image.PNG"> <br><br>
+<img src="./images/aws-private-repo/8_pre_requisites_for_push_commands.PNG"> <br><br>
+<img src="./images/aws-private-repo/9_image_naiming_in_docker_registries.PNG"> <br><br>
+<img src="./images/aws-private-repo/10_push_image.PNG"> <br><br>
+<img src="./images/aws-private-repo/11_image_list_after_pushPNG.PNG"> <br><br>
+<img src="./images/aws-private-repo/12_rebuild_image_after_modify_some_code.PNG"> <br><br>
+<img src="./images/aws-private-repo/13_push_after_new_changes.PNG"> <br><br>
+<img src="./images/aws-private-repo/14_update_list_after_push_new_change.PNG"> <br><br>
+<img src="./images/aws-private-repo/15_jenkins_will_do_all_thos_things.png"> <br><br>
+
       
       
 
