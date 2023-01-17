@@ -187,6 +187,10 @@ Details
 Execute the following commands
 
       docker build -t my-app:1.0
+      
+      Output
+         app listing on port 3000
+      
 Check docker image
 
       docker images
@@ -198,7 +202,8 @@ Check docker image
             mongo-express   4.0       191c4017dcdd   2 years ago      89.3MB
             redis           latest    5f2e708d56aa   5 days ago       117MB
             redis           4.0       191c4017dcdd   2 years ago      89.3MB
-
+Multi-image layer <br>
+<img src="./images/dockerfile/image_layer.PNG" style="height:350px; width:430px">
       
       
 
