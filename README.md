@@ -168,6 +168,37 @@ at last shut down the container and network
          Removing myapp_mongo_express_1 ... done
          Removing myapp_mongodb_1 ... done
          Removing networks "myapp_default"
+
+### Dockerfile
+Dockerfile is a blueprint of docker image. Create a Dockerfile at the root of project.
+
+      FROM node:13-alpine
+      ENV MONGO_DB_USERNAME='admin'\
+         MONGO_DB_PWD='12345'
+      RUN mkdir -p /home/app
+      COPY . /home/app
+      CMD ["node", "/home/app/server.js"]
+Details
+ 
+      ├── node:13-alpine         # install node
+      ├── RUN                    # linux command which execute inside docker container not host machine
+      ├── COPY                   # xecute host machine instead of 
+      └── CMD                    # entry point command, start the app with "node server.js"
+Execute the following commands
+
+      docker build -t my-app:1.0
+Check docker image
+
+      docker images
+      
+      Output
+         	REPOSITORY      TAG       IMAGE ID       CREATED       	  SIZE
+            my-app  	 	    1.0 	     2e0a4d16e074	  10 minutes ago   116MB
+            mongo        	 latest    5f2e708d56aa   5 days ago       117MB
+            mongo-express   4.0       191c4017dcdd   2 years ago      89.3MB
+            redis           latest    5f2e708d56aa   5 days ago       117MB
+            redis           4.0       191c4017dcdd   2 years ago      89.3MB
+
       
       
 
