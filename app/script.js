@@ -1,0 +1,1 @@
+console.log("I am your script. Run docker to print me");

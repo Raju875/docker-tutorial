@@ -1,0 +1,19 @@
+{
+  "name": "docker-tutorial",
+  "version": "1.0.0",
+  "description": "This is the instruction repository for docker.",
+  "main": "script.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raju875/docker-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raju875/docker-tutorial/issues"
+  },
+  "homepage": "https://github.com/Raju875/docker-tutorial#readme"
+}
