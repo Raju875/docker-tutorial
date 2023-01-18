@@ -1,11 +1,5 @@
 # docker-tutorial
-This is a basic overview of how to use Docker. 
-Steps:
-
-    # First develop an app locally with docker container.
-    # Build own docker image.
-    # Push the image to the private repository as continious intregrations(CI).
-    # Finally pull images both from private & public repository to the development server. 
+This is a basic overview of how to use Docker. <br>
 <img src="./images/overview.png" alt="docker-basic-overveiw" style="height:400px; width:800px"> <br><br>
 
 ## Table of Contents
@@ -208,12 +202,12 @@ Check docker image
             mongo-express   4.0       191c4017dcdd   2 years ago      89.3MB
             redis           latest    5f2e708d56aa   5 days ago       117MB
             redis           4.0       191c4017dcdd   2 years ago      89.3MB
-Multi-image layer <br><br>
+Multi-image layer <br>
 <img src="./images/dockerfile/image_layer.PNG" style="height:400px; width:800px">
 
 ### Docker Private Repository
 First login AWS, create a reposity "my-app" under ERC(elastic registry container) service and follow the sequence steps: <br><br>
-*** Note: Jenkins is responsible to do this process. But here we will simulate it manually. *** <br><br>
+*** Note: Jenkins is responsible to do this process. But here we will simulate it manually. *** <br>
 <img src="./images/aws-private-repo/1_ecr_get_started.PNG" style="height:400px; width:800px"> <br><br>
 <img src="./images/aws-private-repo/2_create_repository.PNG" style="height:400px; width:800px"> <br><br>
 <img src="./images/aws-private-repo/3_repository_list.PNG" style="height:400px; width:800px"> <br><br>
