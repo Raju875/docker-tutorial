@@ -206,6 +206,7 @@ Multi-image layer <br><br>
 
 ### Docker Private Repository
 First login AWS, create a reposity "my-app" under ERC(elastic registry container) service and follow the sequence steps: <br><br>
+*** Note: Jenkins is responsible to do this process. But here we will simulate it manually. *** <br><br>
 <img src="./images/aws-private-repo/1_ecr_get_started.PNG" style="height:400px; width:800px"> <br><br>
 <img src="./images/aws-private-repo/2_create_repository.PNG" style="height:400px; width:800px"> <br><br>
 <img src="./images/aws-private-repo/3_repository_list.PNG" style="height:400px; width:800px"> <br><br>
