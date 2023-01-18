@@ -1,6 +1,6 @@
 # docker-tutorial
 This is a basic overview of how to use Docker. <br><br>
-<img src="./images/overview.PNG" alt="docker-basic-overveiw" style="height:400px; width:800px"> <br><br>
+<img src="./images/overview.png" alt="docker-basic-overveiw" style="height:400px; width:800px"> <br><br>
 
 ## Table of Contents
 
