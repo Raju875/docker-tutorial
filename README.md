@@ -1,5 +1,6 @@
 # docker-tutorial
-This is the instruction repository for docker.
+This is a basic overview of how to use Docker. <br><br>
+<img src="./images/overview.PNG" alt="docker-basic-overveiw" style="height:400px; width:800px"> <br><br>
 
 ## Table of Contents
 
@@ -24,16 +25,16 @@ This is the instruction repository for docker.
           redis        4.0       191c4017dcdd   2 years ago     89.3MB
           my-test-app  1.0 	   2e0a4d16e074	  10 minutes ago    116MB
 #### # remove image
-      docker rmi 2e0a4d16e074
-#### # run command first check locally. If not found then it will pull it from docker-hub and then start it.
-  docker run redis:4.0
-#### # run with detach mode, define port and container name
+    docker rmi 2e0a4d16e074
+#### # At first docker run command will check locally & if not found then it will pull the image from docker-hub and create container.
+    docker run redis:4.0
+#### # container create  with detach mode, define port and container name
     docker run -d -p 7001:6379 --name redis-older redis:4.0
 #### # lists container
     docker ps
     
     Output
-        	 CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS         PORTS      NAMES
+          CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS         PORTS      NAMES
           8154f8444eb8   redis:4.0   "docker-entrypoint.s…"   10 minutes ago   Up 2 minutes   6379/tcp   strange_benz
           2595ae900411   redis       "docker-entrypoint.s…"   14 minutes ago   Up 2 minutes   6379/tcp   silly_ellis
 #### # lists container only id
@@ -44,7 +45,7 @@ This is the instruction repository for docker.
         2595ae900411
 #### # remove docker container
     docker rm 2e0a4d16e074
-#### # lists running & stoped container
+#### # lists both running & stoped container
     docker ps -a
     
     Output
@@ -57,7 +58,7 @@ This is the instruction repository for docker.
     docker stop 8154f8444eb8/redis-older
 #### # container logs by id or name
     docker logs 8154f8444eb8/redis-older
-#### # interactive terminal. On interactive terminal type env to show the env details
+#### # interactive terminal. On interactive terminal,type env to show the env details
     docker exec -it redis-older /bin/bash or /bin/sh
     or
     docker exec -it redis-older /bin/bash or /bin/bash
@@ -95,7 +96,7 @@ This is the instruction repository for docker.
       docker ps
       
       Output
-            CONTAINER ID   IMAGE       	  COMMAND                  CREATED          STATUS         PORTS              NAMES
+            CONTAINER ID   IMAGE       	    COMMAND                  CREATED          STATUS         PORTS              NAMES
             8154f8444eb8   mongo-express    "tini -- /docker-enc"    10 minutes ago   Up 2 minutes   0.0.0.0:8081/tcp   mongo-express
             2595ae900411   mongo            "docker-entrypoint.s…"   14 minutes ago   Up 2 minutes   0.0.0.0:27017/tcp  mongodb
 
@@ -206,6 +207,7 @@ Multi-image layer <br><br>
 
 ### Docker Private Repository
 First login AWS, create a reposity "my-app" under ERC(elastic registry container) service and follow the sequence steps: <br><br>
+*** Note: Jenkins is responsible to do this process. But here we will simulate it manually. *** <br><br>
 <img src="./images/aws-private-repo/1_ecr_get_started.PNG" style="height:400px; width:800px"> <br><br>
 <img src="./images/aws-private-repo/2_create_repository.PNG" style="height:400px; width:800px"> <br><br>
 <img src="./images/aws-private-repo/3_repository_list.PNG" style="height:400px; width:800px"> <br><br>
