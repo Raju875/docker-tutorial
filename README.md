@@ -1,5 +1,11 @@
 # docker-tutorial
-This is a basic overview of how to use Docker. <br><br>
+This is a basic overview of how to use Docker. 
+Steps:
+
+    # First develop an app locally with docker container.
+    # Build own docker image.
+    # Push the image to the private repository as continious intregrations(CI).
+    # Finally pull images both from private & public repository to the development server. 
 <img src="./images/overview.png" alt="docker-basic-overveiw" style="height:400px; width:800px"> <br><br>
 
 ## Table of Contents
